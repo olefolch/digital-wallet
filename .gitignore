@@ -485,5 +485,9 @@ $RECYCLE.BIN/
 
 # Claude Code
 .claude/
+
+# VS Code / IDE
+*.lscache
+*.http
 CLAUDE.md
 ROADMAP.md
