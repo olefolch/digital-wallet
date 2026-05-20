@@ -1,3 +1,4 @@
+using AuthService.Application.Features.Auth.Commands.Login;
 using AuthService.Application.Features.Auth.Commands.Register;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -14,5 +15,13 @@ public class AuthController(IMediator mediator) : ControllerBase
         var userId = await mediator.Send(command);
 
         return CreatedAtAction(nameof(Register), new { id = userId }, new { id = userId });
+    }
+
+    [HttpPost("login")]
+    public async Task<IActionResult> Login([FromBody] LoginCommand command)
+    {
+        var token = await mediator.Send(command);
+
+        return Ok(new { token });
     }
 }
