@@ -52,7 +52,7 @@ Construir uma plataforma de carteira digital do zero até o deploy em nuvem, apl
 
 ---
 
-### Fase 2 — Auth Service 🚧 Em andamento
+### Fase 2 — Auth Service ✅ Concluída em 2026-05-21
 > Primeiro serviço: simples, mas com a estrutura correta desde o início.
 
 - [x] Criar solução com Clean Architecture (Domain / Application / Infrastructure / API)
@@ -60,13 +60,13 @@ Construir uma plataforma de carteira digital do zero até o deploy em nuvem, apl
 - [x] JWT gerado com chave configurável
 - [x] Hash de senha com BCrypt
 - [x] Testes unitários na camada de domínio (4 testes)
-- [ ] Middleware de tratamento de erros
-- [ ] Docker + SQL Server rodando localmente
-- [ ] Migration do EF Core
-- [ ] Dockerfile para o serviço
+- [x] Middleware de tratamento de erros (DomainException → 422)
+- [x] Docker + SQL Server rodando localmente
+- [x] Migration do EF Core aplicada automaticamente no startup
+- [x] Dockerfile para o serviço
 - [ ] Refresh token (futuro)
 
-**Entregável:** API de autenticação rodando em container Docker.
+**Entregável:** API de autenticação rodando em container Docker. ✅
 
 ---
 
@@ -219,7 +219,7 @@ Construir uma plataforma de carteira digital do zero até o deploy em nuvem, apl
 
 - [x] Definição do projeto e arquitetura
 - [x] Fase 1 — Fundamentos Teóricos ✅
-- [x] Fase 2 — Auth Service 🚧 (em andamento — falta Docker, migrations, middleware)
+- [x] Fase 2 — Auth Service ✅ (completo — rodando em Docker com SQL Server)
 - [ ] Fase 3 — Account Service
 - [ ] Fase 4 — Transaction Service
 - [ ] Fase 5 — Notification Service
