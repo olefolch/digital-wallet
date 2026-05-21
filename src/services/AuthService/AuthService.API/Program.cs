@@ -1,3 +1,4 @@
+using AuthService.API.Middlewares;
 using AuthService.Application;
 using AuthService.Infrastructure;
 
@@ -19,6 +20,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
