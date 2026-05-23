@@ -166,7 +166,24 @@ Construir uma plataforma de carteira digital do zero até o deploy em nuvem, apl
 
 ---
 
-### Fase 10 — Polimento do Portfólio (Semana 15)
+### Fase 10 — AI Features com Claude SDK (Semana 15)
+> Integração de inteligência artificial sobre a fundação enterprise já construída.
+
+- [ ] Adicionar pacote `Anthropic` (SDK C# oficial) ao projeto
+- [ ] Criar `AIService` como microsserviço separado ou módulo interno
+- [ ] **Análise de fraude**: detectar padrões suspeitos em transações via Claude
+- [ ] **Categorização de gastos**: classificar transações automaticamente (alimentação, transporte, etc.)
+- [ ] **Resumo financeiro**: gerar insights mensais sobre os gastos do usuário
+- [ ] Integrar com Transaction Service via eventos RabbitMQ
+- [ ] Dockerfile
+
+**Conceito-chave:** AI como capacidade enterprise integrada à arquitetura, não como demo isolado.
+
+**Entregável:** features de AI funcionando sobre microsserviços reais com arquitetura sólida.
+
+---
+
+### Fase 11 — Polimento do Portfólio (Semana 16)
 > O que o recrutador vai ver primeiro.
 
 - [ ] README profissional: arquitetura, tecnologias, como rodar, link do deploy
@@ -194,6 +211,7 @@ Construir uma plataforma de carteira digital do zero até o deploy em nuvem, apl
 | Containers | Docker + Docker Compose |
 | CI/CD | GitHub Actions |
 | Nuvem | Railway ou Azure |
+| AI | Claude SDK (C# / Anthropic) |
 
 ---
 
@@ -209,6 +227,7 @@ Construir uma plataforma de carteira digital do zero até o deploy em nuvem, apl
 | Idempotência | Transaction Service |
 | Cache-aside Pattern | Transaction Service + Redis |
 | Event-driven Architecture | RabbitMQ + Notification Service |
+| AI Integration | AI Service + Claude SDK |
 | Microsserviços | Toda a plataforma |
 | Docker / Containers | Todos os serviços |
 | CI/CD | GitHub Actions |
@@ -227,9 +246,10 @@ Construir uma plataforma de carteira digital do zero até o deploy em nuvem, apl
 - [ ] Fase 7 — Frontend Angular
 - [ ] Fase 8 — Docker Compose
 - [ ] Fase 9 — CI/CD e Deploy
-- [ ] Fase 10 — Polimento do Portfólio
+- [ ] Fase 10 — AI Features
+- [ ] Fase 11 — Polimento do Portfólio
 
 ---
 
-> Atualizado em: 2026-05-20
+> Atualizado em: 2026-05-22
 > Guiado por: Claude Code
