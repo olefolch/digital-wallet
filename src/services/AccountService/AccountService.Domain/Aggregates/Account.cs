@@ -12,6 +12,7 @@ public class Account
     public AccountStatus Status { get; private set; }
     public DateTime CreatedAt { get; private set; }
 
+    private Account() { } // necessário para o EF Core instanciar a entidade
     private Account(Guid ownerId, string currency)
     {
         Id = Guid.NewGuid();

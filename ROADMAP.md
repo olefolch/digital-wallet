@@ -70,18 +70,18 @@ Construir uma plataforma de carteira digital do zero até o deploy em nuvem, apl
 
 ---
 
-### Fase 3 — Account Service (Semanas 4-5)
+### Fase 3 — Account Service ✅ Concluída em 2026-05-25
 > Domínio mais rico — aqui o DDD começa a fazer sentido.
 
-- [ ] Aggregate `Account` com regras de negócio (saldo não pode ser negativo, etc.)
-- [ ] Value Object `Money` (valor + moeda)
-- [ ] Repository pattern com Entity Framework + SQL Server
-- [ ] CQRS com MediatR (Commands para escrita, Queries para leitura)
-- [ ] Endpoint: criar conta, consultar saldo, extrato
-- [ ] Testes unitários no domínio
-- [ ] Dockerfile
+- [x] Aggregate `Account` com regras de negócio (saldo não pode ser negativo, etc.)
+- [x] Value Object `Money` (valor + moeda)
+- [x] Repository pattern com Entity Framework + SQL Server
+- [x] CQRS com MediatR (Commands para escrita, Queries para leitura)
+- [x] Endpoint: criar conta, consultar saldo, extrato
+- [x] Testes unitários no domínio
+- [x] Dockerfile
 
-**Entregável:** serviço de contas com DDD real, rodando em Docker.
+**Entregável:** serviço de contas com DDD real, rodando em Docker. ✅
 
 ---
 
@@ -239,7 +239,7 @@ Construir uma plataforma de carteira digital do zero até o deploy em nuvem, apl
 - [x] Definição do projeto e arquitetura
 - [x] Fase 1 — Fundamentos Teóricos ✅
 - [x] Fase 2 — Auth Service ✅ (completo — rodando em Docker com SQL Server)
-- [ ] Fase 3 — Account Service
+- [x] Fase 3 — Account Service ✅ (completo — rodando em Docker com SQL Server)
 - [ ] Fase 4 — Transaction Service
 - [ ] Fase 5 — Notification Service
 - [ ] Fase 6 — API Gateway
@@ -251,5 +251,5 @@ Construir uma plataforma de carteira digital do zero até o deploy em nuvem, apl
 
 ---
 
-> Atualizado em: 2026-05-22
+> Atualizado em: 2026-05-25
 > Guiado por: Claude Code
