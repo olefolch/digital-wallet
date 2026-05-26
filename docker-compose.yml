@@ -34,3 +34,35 @@ services:
       ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=AccountDb;User Id=sa;Password=${SA_PASSWORD};TrustServerCertificate=True"
     depends_on:
       - sqlserver
+
+  transaction-service:
+    build:
+      context: ./src/services/TransactionService
+      dockerfile: Dockerfile
+    ports:
+      - "5003:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=TransactionDb;User Id=sa;Password=${SA_PASSWORD};TrustServerCertificate=True"
+      RabbitMQ__Host: "rabbitmq"
+      RabbitMQ__Username: "guest"
+      RabbitMQ__Password: "${RABBITMQ_PASSWORD}"
+      Redis__ConnectionString: "redis:6379"
+    depends_on:
+      - sqlserver
+      - rabbitmq
+      - redis
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "${RABBITMQ_PASSWORD}"
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"

@@ -85,19 +85,19 @@ Construir uma plataforma de carteira digital do zero até o deploy em nuvem, apl
 
 ---
 
-### Fase 4 — Transaction Service (Semanas 6-7)
+### Fase 4 — Transaction Service ✅ Concluída em 2026-05-25
 > O coração da aplicação — onde mora a baixa latência.
 
-- [ ] Aggregate `Transaction` com regras (transferência, depósito, saque)
-- [ ] **Idempotency Key** — evitar transações duplicadas
-- [ ] **Redis** como cache de saldo (leitura rápida)
-- [ ] Publicar evento `TransactionCreated` no RabbitMQ ao concluir transação
-- [ ] Testes unitários e de integração
-- [ ] Dockerfile
+- [x] Aggregate `Transaction` com regras (transferência, depósito, saque)
+- [x] **Idempotency Key** — evitar transações duplicadas
+- [x] **Redis** como cache de idempotency key (cache-aside pattern)
+- [x] Publicar evento `TransactionCreated` no RabbitMQ ao concluir transação
+- [x] Testes unitários no domínio
+- [x] Dockerfile
 
 **Conceitos-chave:** idempotência, eventual consistency, cache-aside pattern.
 
-**Entregável:** serviço de transações com baixa latência e publicação de eventos.
+**Entregável:** serviço de transações com baixa latência e publicação de eventos. ✅
 
 ---
 
