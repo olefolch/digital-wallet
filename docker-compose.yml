@@ -37,8 +37,8 @@ services:
 
   transaction-service:
     build:
-      context: ./src/services/TransactionService
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: src/services/TransactionService/Dockerfile
     ports:
       - "5003:8080"
     environment:
@@ -47,11 +47,28 @@ services:
       RabbitMQ__Host: "rabbitmq"
       RabbitMQ__Username: "guest"
       RabbitMQ__Password: "${RABBITMQ_PASSWORD}"
-      Redis__ConnectionString: "redis:6379"
+      Redis__ConnectionString: "redis:6379,abortConnect=false,connectTimeout=10000"
     depends_on:
       - sqlserver
       - rabbitmq
       - redis
+
+  notification-service:
+    build:
+      context: .
+      dockerfile: src/services/NotificationService/Dockerfile
+    environment:
+      DOTNET_ENVIRONMENT: Development
+      RabbitMQ__Host: "rabbitmq"
+      RabbitMQ__Username: "guest"
+      RabbitMQ__Password: "${RABBITMQ_PASSWORD}"
+      Email__Host: "mailhog"
+      Email__Port: "1025"
+      Email__From: "noreply@digitalwallet.com"
+      Email__DefaultRecipient: "user@digitalwallet.com"
+    depends_on:
+      - rabbitmq
+      - mailhog
 
   rabbitmq:
     image: rabbitmq:3-management
@@ -66,3 +83,9 @@ services:
     image: redis:7-alpine
     ports:
       - "6379:6379"
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "1025:1025"
+      - "8025:8025"

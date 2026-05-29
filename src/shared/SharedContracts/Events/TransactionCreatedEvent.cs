@@ -1,4 +1,4 @@
-namespace TransactionService.Application.Events;
+namespace SharedContracts.Events;
 
 public record TransactionCreatedEvent(
     Guid TransactionId,

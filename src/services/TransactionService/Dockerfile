@@ -1,10 +1,10 @@
-# Build
+# Build — contexto é a raiz do repositório
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY . .
-RUN dotnet publish TransactionService.API/TransactionService.API.csproj -c Release -o /app/publish
+COPY src/ .
+RUN dotnet publish services/TransactionService/TransactionService.API/TransactionService.API.csproj -c Release -o /app/publish
 
-# Runtime (imagem menor, sem SDK)
+# Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=build /app/publish .

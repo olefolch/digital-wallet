@@ -101,15 +101,16 @@ Construir uma plataforma de carteira digital do zero até o deploy em nuvem, apl
 
 ---
 
-### Fase 5 — Notification Service (Semana 8)
+### Fase 5 — Notification Service ✅ Concluída em 2026-05-26
 > Consumidor de eventos — introdução a arquitetura orientada a eventos.
 
-- [ ] Consumir evento `TransactionCreated` do RabbitMQ com MassTransit
-- [ ] Enviar e-mail de confirmação (SendGrid ou MailKit)
+- [x] Consumir evento `TransactionCreated` do RabbitMQ com MassTransit
+- [x] Enviar e-mail de confirmação (MailKit + MailHog para desenvolvimento)
 - [ ] Padrão Outbox para garantir entrega (opcional/avançado)
-- [ ] Dockerfile
+- [x] Dockerfile
+- [x] SharedContracts — contrato de evento compartilhado entre serviços
 
-**Entregável:** notificações automáticas via fila de mensagens.
+**Entregável:** notificações automáticas via fila de mensagens. ✅
 
 ---
 
@@ -240,8 +241,8 @@ Construir uma plataforma de carteira digital do zero até o deploy em nuvem, apl
 - [x] Fase 1 — Fundamentos Teóricos ✅
 - [x] Fase 2 — Auth Service ✅ (completo — rodando em Docker com SQL Server)
 - [x] Fase 3 — Account Service ✅ (completo — rodando em Docker com SQL Server)
-- [ ] Fase 4 — Transaction Service
-- [ ] Fase 5 — Notification Service
+- [x] Fase 4 — Transaction Service ✅ (completo — Redis, RabbitMQ, idempotência)
+- [x] Fase 5 — Notification Service ✅ (completo — consumer RabbitMQ, e-mail via MailKit)
 - [ ] Fase 6 — API Gateway
 - [ ] Fase 7 — Frontend Angular
 - [ ] Fase 8 — Docker Compose

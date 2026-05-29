@@ -1,6 +1,6 @@
 using MediatR;
+using SharedContracts.Events;
 using TransactionService.Application.Common;
-using TransactionService.Application.Events;
 using TransactionService.Domain.Aggregates;
 using TransactionService.Domain.Interfaces;
 
