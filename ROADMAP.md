@@ -114,16 +114,16 @@ Construir uma plataforma de carteira digital do zero até o deploy em nuvem, apl
 
 ---
 
-### Fase 6 — API Gateway (Semana 9)
+### Fase 6 — API Gateway ✅ Concluída em 2026-05-30
 > Ponto de entrada único — unifica os serviços para o frontend.
 
-- [ ] Configurar YARP como reverse proxy
-- [ ] Roteamento para cada serviço
-- [ ] Rate limiting (proteger contra abuso)
-- [ ] Validação de JWT centralizada
-- [ ] Dockerfile
+- [x] Configurar YARP como reverse proxy
+- [x] Roteamento para cada serviço
+- [x] Rate limiting por IP (100 req/min, fixed window)
+- [x] Validação de JWT centralizada
+- [x] Dockerfile
 
-**Entregável:** um único endpoint que roteia para todos os serviços.
+**Entregável:** um único endpoint que roteia para todos os serviços. ✅
 
 ---
 
@@ -243,7 +243,7 @@ Construir uma plataforma de carteira digital do zero até o deploy em nuvem, apl
 - [x] Fase 3 — Account Service ✅ (completo — rodando em Docker com SQL Server)
 - [x] Fase 4 — Transaction Service ✅ (completo — Redis, RabbitMQ, idempotência)
 - [x] Fase 5 — Notification Service ✅ (completo — consumer RabbitMQ, e-mail via MailKit)
-- [ ] Fase 6 — API Gateway
+- [x] Fase 6 — API Gateway ✅ (YARP, JWT centralizado, rate limiting por IP)
 - [ ] Fase 7 — Frontend Angular
 - [ ] Fase 8 — Docker Compose
 - [ ] Fase 9 — CI/CD e Deploy

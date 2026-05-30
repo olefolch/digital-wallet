@@ -7,6 +7,25 @@ services:
     ports:
       - "1433:1433"
 
+  api-gateway:
+    build:
+      context: ./src/services/ApiGateway
+      dockerfile: Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      Jwt__Secret: "${JWT_SECRET}"
+      Jwt__Issuer: "digital-wallet"
+      Jwt__Audience: "digital-wallet"
+      ReverseProxy__Clusters__auth-cluster__Destinations__auth-service__Address: "http://auth-service:8080/"
+      ReverseProxy__Clusters__accounts-cluster__Destinations__account-service__Address: "http://account-service:8080/"
+      ReverseProxy__Clusters__transactions-cluster__Destinations__transaction-service__Address: "http://transaction-service:8080/"
+    depends_on:
+      - auth-service
+      - account-service
+      - transaction-service
+
   auth-service:
     build:
       context: ./src/services/AuthService

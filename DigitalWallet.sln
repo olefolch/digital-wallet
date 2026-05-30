@@ -73,6 +73,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{87D0E616
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationService.Application.Tests", "src\services\NotificationService\tests\NotificationService.Application.Tests\NotificationService.Application.Tests.csproj", "{A2007107-B26C-4DCA-8714-A27367874EED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "src\services\ApiGateway\ApiGateway.csproj", "{8A0CDB37-D303-40C3-9625-CDBB04F14216}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -371,6 +373,18 @@ Global
 		{A2007107-B26C-4DCA-8714-A27367874EED}.Release|x64.Build.0 = Release|Any CPU
 		{A2007107-B26C-4DCA-8714-A27367874EED}.Release|x86.ActiveCfg = Release|Any CPU
 		{A2007107-B26C-4DCA-8714-A27367874EED}.Release|x86.Build.0 = Release|Any CPU
+		{8A0CDB37-D303-40C3-9625-CDBB04F14216}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A0CDB37-D303-40C3-9625-CDBB04F14216}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A0CDB37-D303-40C3-9625-CDBB04F14216}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8A0CDB37-D303-40C3-9625-CDBB04F14216}.Debug|x64.Build.0 = Debug|Any CPU
+		{8A0CDB37-D303-40C3-9625-CDBB04F14216}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8A0CDB37-D303-40C3-9625-CDBB04F14216}.Debug|x86.Build.0 = Debug|Any CPU
+		{8A0CDB37-D303-40C3-9625-CDBB04F14216}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A0CDB37-D303-40C3-9625-CDBB04F14216}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A0CDB37-D303-40C3-9625-CDBB04F14216}.Release|x64.ActiveCfg = Release|Any CPU
+		{8A0CDB37-D303-40C3-9625-CDBB04F14216}.Release|x64.Build.0 = Release|Any CPU
+		{8A0CDB37-D303-40C3-9625-CDBB04F14216}.Release|x86.ActiveCfg = Release|Any CPU
+		{8A0CDB37-D303-40C3-9625-CDBB04F14216}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -410,5 +424,6 @@ Global
 		{CFDE6D02-21DA-4C11-8A07-2D9B1EE0EFF8} = {47931FAB-DBE1-FD8F-0AFF-2CD4B99C52C4}
 		{87D0E616-2019-B838-442E-2AF4F5A34C1F} = {47931FAB-DBE1-FD8F-0AFF-2CD4B99C52C4}
 		{A2007107-B26C-4DCA-8714-A27367874EED} = {87D0E616-2019-B838-442E-2AF4F5A34C1F}
+		{8A0CDB37-D303-40C3-9625-CDBB04F14216} = {984BB9B3-3FA3-BE33-9484-CAC21695A33C}
 	EndGlobalSection
 EndGlobal
